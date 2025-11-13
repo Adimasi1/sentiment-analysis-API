@@ -2,10 +2,10 @@ from fastapi import APIRouter, HTTPException, status, Depends
 from sqlalchemy.orm import Session
 from typing import List, Union # Ensure List is imported
 
-import analysis_pipeline
-from database import get_db
-import schemas
-import models
+from app.core import analysis_pipeline
+from app.db.database import get_db
+from app.schemas import schemas
+from app.db import models
 
 router = APIRouter()
 MIN_LENGTH = 5 

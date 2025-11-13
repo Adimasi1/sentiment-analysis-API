@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from database import engine, Base
-import models
-from analysis_endpoints import router as analysis_router
+from app.db.database import engine, Base
+from app.db import models
+from app.api.analysis_endpoints import router as analysis_router
 
 models.Base.metadata.create_all(bind=engine)
 

@@ -1,4 +1,4 @@
-import analysis_core 
+from app.core import analysis_core 
 import pandas as pd
 import json
 
